@@ -385,7 +385,7 @@ read -n1 -rep "${CAT} OPTIONAL - Would you like to install Thunar as file manage
 echo
 
 if [[ $inst3 =~ ^[Yy]$ ]]; then
-  for THUNAR in thunar thunar-volman tumbler thunar-archive-plugin; do
+  for THUNAR in thunar thunar-volman tumbler xarchiver thunar-archive-plugin; do
     install_package "$THUNAR" 2>&1 | tee -a "$LOG"
         if [ $? -ne 0 ]; then
         echo -e "\e[1A\e[K${ERROR} - $THUNAR install had failed, please check the install.log"
